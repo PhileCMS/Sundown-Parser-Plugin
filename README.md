@@ -7,7 +7,7 @@ Replace the default parser in [Phile](https://github.com/PhileCMS/Phile) with th
 
 * Install [PHP-Sundown](https://github.com/chobie/php-sundown)
 * Install [Phile](https://github.com/PhileCMS/Phile)
-* Download this repo and drop it into the Phile root directory
+* Download this repo and drop it into the _Phile root directory_
 
 After you have installed the plugin. You need to add the following line to your `config.php` file:
 
