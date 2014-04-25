@@ -1,11 +1,19 @@
 <?php
-namespace Phile\Parser;
+/**
+ * Parser class
+ */
+namespace Phile\Plugin\Phile\Sundown;
 
-class Sundown implements ParserInterface {
+use Phile\ServiceLocator\ParserInterface;
+
+class Parser implements ParserInterface {
 	private $config;
 
-	public function __construct($config = null)
-	{
+	/**
+	 * the constructor
+	 * @param null $config
+	 */
+	public function __construct($config = null) {
 		if (is_null($config)) {
 			$this->config = array(
 				'fenced_code_blocks' => true,
@@ -18,7 +26,13 @@ class Sundown implements ParserInterface {
 			$this->config = $config;
 		}
 	}
-	// overload the Markdown parse with the Sundown parser
+
+	/**
+	 * overload the Markdown parse with the Sundown parser
+	 * @param $data
+	 *
+	 * @return mixed
+	 */
 	public function parse($data) {
 		$sundown = new \Sundown\Markdown(\Sundown\Render\HTML, $this->config);
 		return $sundown->render($data);

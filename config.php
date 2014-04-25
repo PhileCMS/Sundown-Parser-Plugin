@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * config file
+ */
 // some default settings for the parser
 return array(
   'fenced_code_blocks' => true,
