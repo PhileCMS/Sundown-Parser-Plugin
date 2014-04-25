@@ -15,7 +15,6 @@ php composer.phar require phile/sundown:*
 ### 1.2 Installation (Download)
 
 * Clone this repo into `plugins/phile/sundown`
-* add `$config['plugins']['phile\\sundown'] = array('active' => true);` to your `config.php`
 
 ### 2. Activation
 
