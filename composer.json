@@ -1,7 +1,7 @@
 {
 	"name": "phile/sundown",
 	"type": "phile-plugin",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "license": "MIT",
     "description": "Replace the default parser in Phile with the PHP-Sundown (https://github.com/chobie/php-sundown) (C parser for Markdown).",
     "homepage": "http://philecms.com",
