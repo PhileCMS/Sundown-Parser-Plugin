@@ -12,7 +12,12 @@ class Plugin extends \Phile\Plugin\AbstractPlugin implements \Phile\Gateway\Even
 	 * the constructor
 	 */
 	public function __construct() {
-		\Phile\Event::registerEvent('plugins_loaded', $this);
+		if (!extension_loaded('sundown')) {
+			throw new \Exception('Sundown is not installed or is not configured correctly');
+			exit;
+		} else {
+			\Phile\Event::registerEvent('plugins_loaded', $this);
+		}
 	}
 
 	/**
